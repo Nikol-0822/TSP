@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complejidad Algoritmica</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container flex justify-between">
+        <div id="mapid" class="h-screen w-6/12"></div>
+        <div class="content flex flex-col w-5/12 p-3">
+            <h1 class="text-center text-5xl my-5">TSP SOLVER</h1>
+            <p class="text-xl my-3">Author: Nicoll Malca Rojas</p>
+            <form class="w-full max-w-sm my-3">
+                <div class="flex items-center border-b border-teal-500 py-2 my-3">
+                  <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Department" id="department">
+                  <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button" id="department-btn">
+                    Filter
+                  </button>
+                </div>
+                <div class="flex items-center border-b border-teal-500 py-2 my-3">
+                    <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Province"id="province">
+                    <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button" id="province-btn">
+                      Filter
+                    </button>
+                </div>
+                <div class="flex items-center border-b border-teal-500 py-2 my-3">
+                    <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="District" id="district">
+                    <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button" id="district-btn">
+                      Filter
+                    </button>
+                </div>
+            </form>
+            <div class="flex my-4">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="draw-btn">Draw Cities</button>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-4" id="calculate-btn">Calculate</button>
+            </div>
+            <div>
+                <h2 class="text-4xl my-4">Solution:</h2>
+                <div id="km" class="text-3xl text-green-600 font-bold">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script type="text/javascript" src="./src/papaparse.min.js"></script>
+    <script type="text/javascript" src="./src/main.js"></script>
+</body>
+</html>
