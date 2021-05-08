@@ -221,7 +221,7 @@ const TSP_BACKTRACKING = (graph, length_solution, recorded_distance, result) => 
 			let new_distance = recorded_distance + graph.getDistance(graph.cities[length_solution], graph.cities[length_solution + 1]);
 			if (new_distance >= result)
 			{
-				continue; //backtracking
+				continue; 
 			}
 			else
 			{
@@ -231,9 +231,6 @@ const TSP_BACKTRACKING = (graph, length_solution, recorded_distance, result) => 
 		}
     }
     return result;
-
-}
-const TSP_DFS = () => {
 
 }
 const main = async () => {
