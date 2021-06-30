@@ -312,6 +312,7 @@ const main = async () => {
     let filtered_graph = null;
     let graph = new Graph()
     let data = await graph.getData()
+    console.log(data)
     graph.chargeCities(data)
     var mymap = L.map('mapid').setView(graph.cities[0].coordinate(),
         5);
